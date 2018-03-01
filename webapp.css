@@ -29,7 +29,7 @@ body {
 }
 
 #leftColumn	 {
-	background-image: url("images/eggs.png");
+	background-color: white;
 	background-size: 100%;
 	background-repeat:no-repeat;
 	height: 650px;
