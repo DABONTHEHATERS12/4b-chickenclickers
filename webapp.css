@@ -57,6 +57,17 @@ body {
 	text-align:right;
 }
 
+#earth {
+	width: 100px;
+	font-size:20px;
+	background-color:rgba(71,200,221,1.00);
+	border-radius: 10px;
+	border-color:rgba(98,181,76,1.00);
+	color: white;
+}
+
+
+
 
 
 /* responsive widths*/
