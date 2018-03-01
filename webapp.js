@@ -1,8 +1,7 @@
 // JavaScript Document
 
 //var name = prompt("Hi there! What do you want to name you egg company?");
-	//var valid=confirm("is " +name+ " correct?")
-	//document.write(" "+name+" ");
+//document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+name+" ");
 	
 	
 // global variables
@@ -14,8 +13,7 @@ var farms = 0;
 var eggtopia = 0;
 var universee = 0;
 
-window.onload = function() {
-	// load cookies
+window.onload = function() { 
 	load_cookies();
 	update_values();
 };
@@ -23,6 +21,7 @@ window.onload = function() {
 function chicken_clicker() {
 	eggs++;
 	update_values();
+	//document.getElementById("eggs")
 }
 
 // buy("chicks");
@@ -117,7 +116,7 @@ function changeCSS(cssFile, cssLinkIndex) {
 
 // COOKIES
 function save_game() {
-	var exdays = 365;
+	var exdays = 1000;
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
@@ -148,7 +147,19 @@ function get_cookie(cname) {
 }
 
 function load_cookies() {
-    eggs = Number(get_cookie("eggs"));
+    if( get_cookie("eggs") != "" ) {
+		eggs = Number(get_cookie("eggs"));
+	}
+	else {
+		eggs = 0;
+	}
+	if( get_cookie("chicks") != "" ) {
+		eggs = Number(get_cookie("chicks"));
+	}
+	else {
+		eggs = 0;
+	}
+	eggs = Number(get_cookie("eggs"));
     chicks = Number(get_cookie("chicks"));
     cartons = Number(get_cookie("cartons"));
     trucks = Number(get_cookie("trucks"));
